@@ -1,0 +1,10 @@
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.bmp
+*.tiff
+
+# Keep the project structure but ignore image content
