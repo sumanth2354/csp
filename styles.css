@@ -237,6 +237,21 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.members-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.member-name {
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
 /* Gallery Section */
 #gallery {
     background: #f8f9fa;
