@@ -296,6 +296,13 @@
         </div>
     </section>
 
+    <!-- Photo Modal/Lightbox -->
+    <div id="photoModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="modalCaption"></div>
+    </div>
+
     <!-- Feedback & Survey Section -->
     <section id="feedback">
         <div class="container">
@@ -541,6 +548,49 @@
             
             // 2. Or show a modal with instructions
             // alert('Please replace the Google Drive URL in the code with your actual folder link');
+        });
+
+        // Photo Modal/Lightbox functionality
+        const modal = document.getElementById('photoModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCaption = document.getElementById('modalCaption');
+        const closeBtn = document.querySelector('.close');
+
+        // Add click event to all gallery images
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+                modalCaption.innerHTML = this.alt;
+            });
+        });
+
+        // Add click event to all feedback/survey form images
+        document.querySelectorAll('.feedback-pic img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+                modalCaption.innerHTML = this.alt;
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+            }
         });
     </script>
 </body>
