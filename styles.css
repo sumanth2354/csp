@@ -671,6 +671,30 @@ section {
     transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+.footer {
+    text-align: center;
+    padding: 15px 0;
+   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* fixed gradient */
+    color: #fff;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    font-weight: 600;
+    color: #ffd700;  /* gold for LinkedIn link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffdd57; /* lighter gold on hover */
+}
+
 
 /* Responsive modal */
 @media (max-width: 768px) {
